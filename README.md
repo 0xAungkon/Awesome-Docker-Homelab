@@ -1,4 +1,4 @@
-````markdown
+
 # Homelab Docker Compose
 
 Minimalist Docker Compose setup for running essential homelab services.
@@ -12,18 +12,16 @@ Minimalist Docker Compose setup for running essential homelab services.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/homelab-docker-compose.git
-   cd homelab-docker-compose
-````
+      git clone https://github.com/yourusername/homelab-docker-compose.git
+      cd homelab-docker-compose
+   ```
 
 2. Start all services:
-
    ```bash
    docker-compose up -d
    ```
 
 3. Stop all services:
-
    ```bash
    docker-compose down
    ```
