@@ -18,6 +18,7 @@ Minimalist Docker Compose setup for running essential homelab services.
 
 2. Start all services:
    ```bash
+   make start # not yet implemented
    docker-compose up -d
    ```
 
