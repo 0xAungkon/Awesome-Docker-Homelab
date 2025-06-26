@@ -1,0 +1,13 @@
+services:
+  db_admin:
+    image: dpage/pgadmin4
+    container_name: pg_admin
+    user: root
+    ports:
+      - "8085:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 2H4VbTB#I7E3
+    restart: on-failure
+    volumes:
+      - /var/docker-var/pgadmin/data:/var/lib/pgadmin
