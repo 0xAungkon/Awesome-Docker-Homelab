@@ -8,6 +8,7 @@ services:
       - 33306:33306
     volumes:
       - /var/docker-var/warpgate:/data
+      - /var/lib/warpgate:/var/lib/warpgate
     stdin_open: true
     tty: true
 
