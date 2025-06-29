@@ -1,0 +1,12 @@
+services:
+  tududi:
+    image: 'chrisvel/tududi:latest'
+    ports:
+      - '9292:9292'
+    volumes:
+      - '/var/docker-var/tududi:/usr/src/app/tududi_db'
+    environment:
+      - TUDUDI_INTERNAL_SSL_ENABLED=false
+      - TUDUDI_SESSION_SECRET=123456786755
+      - TUDUDI_USER_PASSWORD=123456789
+      - TUDUDI_USER_EMAIL=0xaungkon@gmail.com
