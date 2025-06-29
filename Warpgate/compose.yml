@@ -1,16 +1,13 @@
-version: "3.9"
-
+version: '3'
 services:
   warpgate:
-    image: ghcr.io/warp-tech/warpgate:latest
-    container_name: warpgate
+    image: ghcr.io/warp-tech/warpgate
     ports:
+      - 2222:2222
       - 8888:8888
       - 33306:33306
-      - 8081:8080
-      - 2222:2222
     volumes:
-      - ~/docker-var/warpgate_data:/var/lib/warpgate
-    environment:
-      - WARPGATE_TELEMETRY=off
-    restart: unless-stopped
+      - /var/docker-var/warpgate:/data
+    stdin_open: true
+    tty: true
+
