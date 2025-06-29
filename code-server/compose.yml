@@ -11,4 +11,4 @@ services:
       - /var/docker-var/code-server/:/home/coder/workspace
     ports:
       - 8080:8080
-    restart: unless-stopped
+    restart: always

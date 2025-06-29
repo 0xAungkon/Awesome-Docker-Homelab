@@ -13,7 +13,7 @@ services:
       REDIS_URL: "redis://redis:6379"
     ports:
       - "3001:3000"
-    restart: unless-stopped
+    restart: always
     volumes:
       - /var/docker-var/docmost/application-data:/app/data/storage
 
@@ -23,17 +23,13 @@ services:
       POSTGRES_DB: docmost
       POSTGRES_USER: docmost
       POSTGRES_PASSWORD: B8P7MVM6OYCk
-    restart: unless-stopped
+    restart: always
     volumes:
       - /var/docker-var/docmost/db_data:/var/lib/postgresql/data
 
   redis:
     image: redis:7.2-alpine
-    restart: unless-stopped
+    restart: always
     volumes:
       - /var/docker-var/docmost/redis_data:/data
 
-volumes:
-  docmost:
-  db_data:
-  redis_data:
