@@ -3,6 +3,7 @@ services:
     image: 'chrisvel/tududi:latest'
     ports:
       - '9292:9292'
+      - '3002:3002'
     volumes:
       - '/var/docker-var/tududi:/usr/src/app/tududi_db'
     environment:
