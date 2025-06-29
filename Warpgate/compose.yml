@@ -1,17 +1,3 @@
-version: '3'
-services:
-  warpgate:
-    image: ghcr.io/warp-tech/warpgate
-    ports:
-      - 2222:2222
-      - 8888:8888
-      - 33306:33306
-    volumes:
-      - ~/docker-var/Warpgate/data:/data
-    stdin_open: true
-    tty: true
-
-
 version: "3.9"
 
 services:
