@@ -1,11 +1,14 @@
-version: '3'
+version: "3.9"
+
 services:
   warpgate:
-    image: ghcr.io/warp-tech/warpgate
+    image: ghcr.io/warp-tech/warpgate:latest
+    container_name: warpgate
     ports:
-      - 2222:2222
-      - 8888:8888
-      - 33306:33306
+      - "8080:8080"
+      - "2222:2222"
     volumes:
-      - ./data:/data
-    restart: always
+      - ~/docker-var/warpgate_data:/var/lib/warpgate
+    environment:
+      - WARPGATE_TELEMETRY=off
+    restart: unless-stopped
