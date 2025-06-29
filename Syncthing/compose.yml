@@ -10,8 +10,8 @@ services:
       - PGID=1000
       - TZ=Asia/Dhaka
     volumes:
-      - ./config:/config
-      - ./sync:/sync
+      - /var/docker-var/syncthing/config:/config
+      - /var/docker-var/syncthing/sync:/sync
     ports:
       - 8384:8384     # Web UI
       - 22000:22000/tcp
