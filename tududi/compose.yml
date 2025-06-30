@@ -5,7 +5,9 @@ services:
       - '9292:9292'
       - '3002:3002'
     volumes:
-      - '/var/docker-var/tududi:/usr/src/app/tududi_db'
+      - '/var/docker-var/tududi/data:/usr/src/app/tududi_db'
+      - '/var/docker-var/tududi/db:/app/backend/db'
+      
     environment:
       - TUDUDI_INTERNAL_SSL_ENABLED=false
       - TUDUDI_SESSION_SECRET=123456786755
