@@ -27,7 +27,7 @@ services:
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
     volumes:
-      - ~/docker-var/nextcloud/db_data:/var/lib/mysql
+      - /var/docker-var/nextcloud/db_data:/var/lib/mysql
     networks:
       - dbnet
     environment:
