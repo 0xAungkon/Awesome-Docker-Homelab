@@ -8,7 +8,7 @@ services:
       - PASSWORD=LinPassword#1 #Replace this with your login password
     volumes:
       - /var/docker-var/code-server/config:/config
-      - /var/docker-var/code-server/:/home/coder/workspace
+      - /var/docker-var/code-server/home:/home/coder
     ports:
       - 8080:8080
     restart: always
