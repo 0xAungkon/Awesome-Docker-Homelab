@@ -9,7 +9,6 @@ services:
     volumes:
       - /var/docker-var/code-server/config:/config
       - /var/docker-var/code-server/workspace:/home/coder/workspace
-      - /var/docker-var/code-server/.config:/home/coder/.config
     ports:
       - 8080:8080
     restart: always
