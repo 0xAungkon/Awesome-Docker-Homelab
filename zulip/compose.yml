@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  zulip:
+    image: zulip/docker-zulip:latest
+    container_name: zulip
+    ports:
+      - "8071:80"
+    restart: always
+    depends_on:
+      - zulip_postgresql
+      - zulip_redis
+      - zulip_memcached
+    environment:
+      DB_HOST: zulip_postgresql
+      DB_USER: zulip
+      DB_PASSWORD: y3R4xVb9PlkQz28M
+      DB_NAME: zulip
+      REDIS_HOST: zulip_redis
+      MEMCACHED_HOST: zulip_memcached
+      SETUP_API_KEY: "F2b7xjRQGmX0tMz5qKLR4vNHm6aBpC8y"
+      ZULIP_ADMIN_EMAIL: "admin@example.com"
+      ZULIP_AUTH_BACKENDS: "EmailAuthBackend"
+      EXTERNAL_HOST: "localhost"
+      ZULIP_SECRET_KEY: "ljZbT3UJeQd9oNfCgM2bA6LxEY7VzKrP"
+    volumes:
+      /var/docker-var/zulip/zulip_data:/data
+
+  zulip_postgresql:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: zulip
+      POSTGRES_USER: zulip
+      POSTGRES_PASSWORD: y3R4xVb9PlkQz28M
+    volumes:
+      - /var/docker-var/zulip/zulip_postgres_data:/var/lib/postgresql/data
+
+  zulip_redis:
+    image: redis:7-alpine
+    restart: always
+    volumes:
+      - /var/docker-var/zulip/zulip_redis_data:/data
+
+  zulip_memcached:
+    image: memcached:alpine
+    restart: always
+
+
