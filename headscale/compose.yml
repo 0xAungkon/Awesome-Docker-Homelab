@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  headscale:
+    image: headscale/headscale:latest
+    container_name: headscale
+    volumes:
+      - /var/docker-var/jenkins/home/headscale/config:/etc/headscale
+      - /var/docker-var/jenkins/home/headscale/data:/var/lib/headscale
+    ports:
+      - 8086:8080
+    command: headscale serve
+    restart: unless-stopped
