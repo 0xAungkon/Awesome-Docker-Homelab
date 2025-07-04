@@ -34,13 +34,13 @@ services:
       POSTGRES_USER: zulip
       POSTGRES_PASSWORD: y3R4xVb9PlkQz28M
     volumes:
-      - /var/docker-var/zulip/zulip_postgres_data:/var/lib/postgresql/data
+      /var/docker-var/zulip/zulip_postgres_data:/var/lib/postgresql/data
 
   zulip_redis:
     image: redis:7-alpine
     restart: always
     volumes:
-      - /var/docker-var/zulip/zulip_redis_data:/data
+      /var/docker-var/zulip/zulip_redis_data:/data
 
   zulip_memcached:
     image: memcached:alpine
