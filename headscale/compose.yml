@@ -5,8 +5,8 @@ services:
     image: headscale/headscale:latest
     container_name: headscale
     volumes:
-      /var/docker-var/headscale/config:/etc/headscale
-      /var/docker-var/headscale/data:/var/lib/headscale
+      - /var/docker-var/headscale/config:/etc/headscale
+      - /var/docker-var/headscale/data:/var/lib/headscale
     ports:
       - 8086:8080
     command: headscale serve
