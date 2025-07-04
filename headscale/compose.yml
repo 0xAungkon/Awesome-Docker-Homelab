@@ -5,9 +5,20 @@ services:
     image: headscale/headscale:latest
     container_name: headscale
     volumes:
-      - /var/docker-var/jenkins/home/headscale/config:/etc/headscale
-      - /var/docker-var/jenkins/home/headscale/data:/var/lib/headscale
+      /var/docker-var/headscale/config:/etc/headscale
+      /var/docker-var/headscale/data:/var/lib/headscale
     ports:
       - 8086:8080
     command: headscale serve
+    restart: unless-stopped
+
+  headscale-ui:
+    image: ghcr.io/gurucomputing/headscale-ui:latest
+    container_name: headscale-ui
+    environment:
+      - NEXT_PUBLIC_HEADSCALE_URL=http://localhost:8080
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - headscale
     restart: unless-stopped
