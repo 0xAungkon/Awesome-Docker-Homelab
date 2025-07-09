@@ -1,0 +1,8 @@
+
+services:
+  super-productivity:
+    image: ghcr.io/johannesjo/super-productivity:latest
+    container_name: super-productivity
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
