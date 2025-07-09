@@ -4,5 +4,5 @@ services:
     image: johannesjo/super-productivity
     container_name: super-productivity
     ports:
-      - "8080:8080"
+      - "8083:8080"
     restart: unless-stopped
