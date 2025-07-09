@@ -1,7 +1,7 @@
 
 services:
   super-productivity:
-    image: ghcr.io/johannesjo/super-productivity:latest
+    image: johannesjo/super-productivity
     container_name: super-productivity
     ports:
       - "8080:8080"
