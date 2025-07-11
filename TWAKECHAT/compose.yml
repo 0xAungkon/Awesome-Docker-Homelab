@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   twake-web:
-    image: linagora/twake-web:v2.6.5
+    image: linagora/twake-web:latest
     container_name: twake-web
     ports:
       - "6868:6868"
