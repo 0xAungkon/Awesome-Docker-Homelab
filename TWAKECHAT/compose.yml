@@ -8,6 +8,4 @@ services:
       - "6868:6868"
     environment:
       - TWAKECHAT_LISTEN_PORT=6868
-    volumes:
-      - ./config.json:/usr/share/nginx/html/web/config.json
     restart: unless-stopped
