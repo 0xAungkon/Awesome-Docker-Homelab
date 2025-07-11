@@ -5,7 +5,6 @@
   "hide_redacted_events": false,
   "hide_unknown_events": false,
   "homeserver": "https://matrix.org/",
-  "issue_id": "",
   "privacy_url": "https://twake.app/en/privacy/",
   "render_html": true
 }
