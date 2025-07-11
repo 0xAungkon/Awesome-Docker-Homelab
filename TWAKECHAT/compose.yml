@@ -6,6 +6,7 @@ services:
     container_name: twake-web
     ports:
       - "6868:6868"
+      - "6869:80"
     environment:
       - TWAKECHAT_LISTEN_PORT=6868
     restart: unless-stopped
