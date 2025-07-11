@@ -4,5 +4,4 @@
   "hide_unknown_events": false,
   "homeserver": "https://matrix.org/",
   "privacy_url": "https://twake.app/en/privacy/",
-  "render_html": true
 }
