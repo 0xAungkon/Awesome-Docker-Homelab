@@ -1,7 +1,6 @@
 {
   "app_grid_dashboard_available": true,
   "application_name": "Twake Chat",
-  "application_welcome_message": "Welcome to Twake Chat!",
   "default_homeserver": "matrix.org",
   "hide_redacted_events": false,
   "hide_unknown_events": false,
